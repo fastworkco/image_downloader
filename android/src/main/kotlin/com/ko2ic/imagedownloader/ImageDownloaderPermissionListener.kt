@@ -39,13 +39,13 @@ class ImageDownloaderPermissionListener(private val activity: Activity) :
     }
 
     fun alreadyGranted(): Boolean {
-        val permissions = arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE)
-
-        if (!isPermissionGranted(permissions)) {
-            // Request authorization. User is not yet authorized.
-            ActivityCompat.requestPermissions(activity, permissions, permissionRequestId)
-            return false
-        }
+//        val permissions = arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+//
+//        if (!isPermissionGranted(permissions)) {
+//            // Request authorization. User is not yet authorized.
+//            ActivityCompat.requestPermissions(activity, permissions, permissionRequestId)
+//            return false
+//        }
         // User already has authorization. Or below Android6.0
         return true
     }
